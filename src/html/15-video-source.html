@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>video, source 요소</title>
+  </head>
+  <body>
+    <video controls muted poster="/src/assets/video/poster.jpg">
+      <source
+        src="/src/assets/video/google-developer-stories.mp4"
+        type="video/mp4"
+      />
+      <!-- 자막파일 -->
+      <track
+        src="/src/assets/video/google-developer-stories-subtitles-en.vtt"
+        kind="captions"
+        srclang="en"
+        label="English Caption"
+      />
+    </video>
+    <hr />
+    <!-- 이것도 가능 -->
+    <!-- <video
+      controls
+      src="/src/assets/video/google-developer-stories.mp4"
+    ></video> -->
+  </body>
+</html>
