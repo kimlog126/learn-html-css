@@ -1,0 +1,20 @@
+.likelion {
+  .likelion__list {
+    list-style: none;
+
+    /* &는 위 이름을 그대로 가져오겠다. 가상요소의 경우에만 가능. 클래스이름 가져오는것은 안된다. */
+    &:hover {
+      background-color: pink;
+    }
+  }
+}
+
+/*중첩 많으면 헷갈리니까 그냥 따로 써.. 큰 거 연결되게만 해줘 hover 같은 경우 아니면 */
+
+.likelion__item {
+  color: green;
+}
+
+.likelion__link {
+  color: inherit;
+}

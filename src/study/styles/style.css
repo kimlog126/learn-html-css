@@ -1,0 +1,71 @@
+/* css 선택자
+
+p {
+  color: red;
+
+  &:hover {
+    background-color: rgb(157, 235, 135);
+  }
+
+  &:focus {
+    border: 10px solid red;
+  }
+}
+
+.two {
+  color: blue;
+}
+
+#three {
+  color: green;
+}
+
+[title] {
+  color: purple;
+}
+
+a:visited {
+  color: orange;
+}
+
+p:focus {
+  color: aqua;
+  border: 5px solid blue;
+}
+
+h2::before {
+  content: '우와';
+  color: pink;
+}
+h2::after {
+  content: '야호';
+  background-color: yellow;
+} */
+
+p {
+  color: blue;
+}
+
+body p {
+  color: blue;
+}
+
+.in {
+  background-color: pink;
+}
+
+.casc {
+  background-color: skyblue;
+}
+
+body p[class] {
+  background-color: lime;
+}
+
+#in {
+  background-color: orange;
+}
+
+.in.speci {
+  border: 5px dotted blue;
+}
