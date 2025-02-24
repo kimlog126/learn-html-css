@@ -1,0 +1,88 @@
+@import url(/src/common/mini-reset.css);
+
+:root {
+  /* 색상 */
+  --green: #00dc87;
+  --gray: #c6c6c6;
+  --brown: #e4831c;
+
+  /* 폰트 사이즈 */
+  --small: 0.75rem;
+  --medium: 0.875rem;
+  --defalut: 1rem;
+  --large: 1.125rem;
+
+  /* 배치 값 */
+  --spacing-10: 0.625rem;
+  --spacing-20: 1.25rem;
+  --spacing-70: 4.375rem;
+}
+
+body {
+  font-family: 'SUIT';
+  margin: 50px;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+/* 이건 아직 안한거~~ */
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1.25rem;
+}
+
+/* 추가~~ */
+.noti {
+  --border-color: var(--gray);
+  --base-spacing: var(--spacing-20);
+  --text-color: var(--gray);
+  --large-spacing: var(--spacing-70);
+
+  position: relative;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  background: no-repeat var(--base-spacing) 50%;
+
+  /* 사진에 따른 상자 찌그러트리기 */
+  padding: var(--base-spacing) var(--base-spacing) var(--base-spacing)
+    var(--large-spacing);
+
+  .noti-subject {
+    font-size: var(--large);
+  }
+
+  .noti-time {
+    font-size: var(--small);
+    position: absolute;
+    top: var(--base-spacing);
+
+    /* 오른쪽 시작 0 숫자를 늘리면 왼쪽으로 가는거야 */
+    right: var(--base-spacing);
+  }
+
+  .noti-contents {
+    color: var(--text-color);
+    font-size: var(--medium);
+    margin-top: 0.3125rem;
+  }
+
+  /* 이 안의 클래스 상위는 .noti 따라서 .noti.green과 같음 */
+  &.green {
+    background-image: url(/src/assets/svg/pot.svg);
+    .noti-subject,
+    .noti-time {
+      color: var(--green);
+    }
+  }
+
+  &.brown {
+    background-image: url(/src/assets/svg/rice.svg);
+    .noti-subject,
+    .noti-time {
+      color: var(--brown);
+    }
+  }
+}
