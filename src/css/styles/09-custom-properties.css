@@ -1,0 +1,126 @@
+@property --text-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: orange;
+}
+
+/* 전역 변수 정의 */
+:root {
+  /* 색상 팔레트 */
+  --white: #fff;
+  --black: #000;
+  --red: #f00;
+  --green: #0f0;
+  --blue: #00f;
+  --orange: orange;
+  --yellow: yellow;
+  --light-blue: aqua;
+
+  /* 유효 색상 */
+  --primary-color: var(--blue);
+  --secondary-color: var(--light-blue);
+  --accent-color: var(--yellow);
+  --border-color: var(--red);
+
+  /* size */
+  --default: 1rem;
+  --small: 0.75rem;
+  --medium: 0.875rem;
+  --large: 1.125rem;
+
+  --text12: 0.75rem;
+
+  /* 이런식도 가능 */
+  /* --text12: 0.75rem;
+  --text-default;var(--text12); */
+}
+
+.text-card-1 {
+  /* 지역변수 정의 */
+  --bg-color: var(--green);
+  --border-color: var(--red);
+
+  /* --green 속성이 없을 때 대안으로 #2ecc71가 적용되도록 설정 */
+  h1 {
+    background-color: var(--bg-color);
+  }
+  p {
+    border-width: 10px;
+    border-style: solid;
+    border-color: var(--border-color);
+  }
+}
+
+/* :root {
+  --primary-color: #ae34db;
+  --secondary-color: #2ecc71;
+} */
+
+.text-card-2 {
+  /* 지역변수 정의 */
+  --bg-color: var(--blue);
+  --border-color: var(--green);
+
+  /* --green 속성이 없을 때 대안으로 #2ecc71가 적용되도록 설정 */
+  h1 {
+    background-color: var(--bg-color);
+  }
+
+  p {
+    border-width: 10px;
+    border-style: solid;
+    border-color: var(--border-color);
+  }
+}
+
+/* :root {
+  --primary-color: #ae34db;
+  --secondary-color: #2ecc71;
+} */
+
+.wrapper {
+  --font-size: var(--small);
+  --bg-color: var(--green);
+  --text-color: var(--red);
+
+  button {
+    font-size: var(--font-size, 1rem);
+    background-color: var(--bg-color, #fff);
+    color: var(--primary-color, #000);
+  }
+
+  button.open {
+    --font-size: var(--small);
+    --bg-color: var(--green);
+    --text-color: var(--red);
+  }
+
+  button.close {
+    --font-size: var(--default);
+  }
+
+  button.popup {
+    --text-color: var(--blue);
+  }
+
+  button.info {
+    --bg-color: var(--white);
+  }
+}
+
+/* 사용자 정의 속성 활용하기 */
+
+.container {
+  /* --text-color: var(--orange);
+  color: var(--text-color); */
+
+  color: var(--text-color);
+
+  .parent {
+    --text-color: blue;
+
+    .child {
+      color: var(--text-color);
+    }
+  }
+}
