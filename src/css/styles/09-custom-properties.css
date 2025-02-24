@@ -124,3 +124,22 @@
     }
   }
 }
+
+.lion {
+  color: red;
+  border: 1px solid green;
+  padding: 0.5em;
+
+  .parent {
+    padding: inherit;
+    margin: 0;
+
+    .child {
+      color: black;
+      border: inherit;
+      border-color: blue;
+      padding: inherit;
+      display: inline-block;
+    }
+  }
+}
