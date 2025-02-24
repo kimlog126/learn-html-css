@@ -18,7 +18,7 @@
   border: 5px solid green; */
 
   /* 안쪽 여백 설정 */
-  border: 5px solid green;
+  border: 5px dashed green;
 
   /* 각각 지정 */
   /* padding-top: 10px;

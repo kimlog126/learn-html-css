@@ -1,0 +1,20 @@
+.happy {
+  background-color: black;
+  color: white;
+  width: 500px;
+  padding: 0 auto;
+}
+
+.day {
+  border: 5px solid palegreen;
+  margin: 20px;
+  padding: 40px;
+}
+
+span {
+  background-color: palevioletred;
+}
+
+* {
+  background-color: blue;
+}
