@@ -1,0 +1,82 @@
+@import '/src/common/modern-reset.css';
+
+body {
+  font-family: SUIT, sans-serif;
+}
+
+.card {
+  /* BFC - overflow:hidden, display: flow-root, flow: lefe, position: absolute, fixed */
+  /* 이게 최고얌 */
+  /* 엄친아 안보이게 하려면 &.good-partner에 display: flow-root; */
+  /* display: flow-root; */
+
+  /* background-color: pink; */
+  margin: 2em;
+  border: 1px solid #aaa;
+  border-radius: 0.5rem;
+  padding: 2em;
+
+  &.good-partner {
+    display: flow-root;
+  }
+
+  /* 제목 */
+  .subject {
+    /* background: skyblue; */
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    span {
+      /* top, middle, bottom, baseline 기본은 baseline */
+      vertical-align: top;
+
+      /* 부모 사이즈의 rem 상속받아서 그거 바꿔도 절반 크기이기를 바랄때 */
+      /* 이럴때 em을 쓴다 */
+      &[lang='en'] {
+        font-size: 0.5em;
+        /* background-color: yellow; */
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+
+  &:hover {
+    border-radius: 50px 0 50px 0;
+  }
+
+  .thumbnail {
+    --radius: 50%;
+    /* --size: 100px; */
+
+    border: 1px solid #ccc;
+    float: left;
+    margin: 1em;
+    padding: 0.625em;
+    border-radius: var(--radius);
+    width: 120px;
+    /* width: var(--size);
+    height: var(--size); */
+
+    shape-outside: circle(50%);
+
+    img {
+      border-radius: var(--radius);
+      /* 80px */
+      width: 100%;
+      /* 가로 세로 비율이 1대 1이어야 해 */
+      /* 반응형할때 꿀이다 근데 적용 안되는 브라우저가 있을수도.. */
+      aspect-ratio: 1/1;
+
+      /* 원본 안찌그러지게 */
+      object-fit: cover;
+
+      /* 오브젝트의 시작위치 지정. 기본값은 center */
+      object-position: 0 -20px;
+    }
+  }
+
+  .content {
+    margin-top: 0.625rem;
+  }
+}
