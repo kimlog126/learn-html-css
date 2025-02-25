@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>쇼핑카트</title>
+    <link
+      rel="shortcut icon"
+      href="/src/assets/favicon/likelion.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="/src/assets/favicon/likelion.svg" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+    />
+    <link
+      rel="preload"
+      as="style"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/study/styles/0225.css" />
+  </head>
+  <body>
+    <h1>쇼핑해요</h1>
+    <ul class="shopping-list">
+      <div class="title">장바구니</div>
+      <hr />
+      <div class="goods-list">
+        <li>
+          <img src="/src/study/asset/우유.jpg" alt="1A 우유 900mL" />
+          <div class="goods">
+            <p>1A 우유 900mL</p>
+            <p class="price">1,870원</p>
+          </div>
+          <!-- 버튼 -, + 도 클릭되게 할수가 있었음 !! -->
+          <button type="button">2</button>
+        </li>
+      </div>
+      <div class="goods-list">
+        <li>
+          <img src="/src//study/asset/콩나물.jpg" alt="맛있는 콩나물 500g" />
+          <div class="goods">
+            <p>맛있는 콩나물 500g</p>
+            <p class="price">1,280원</p>
+          </div>
+          <!-- 버튼 -, + 도 클릭되게 할수가 있었음 !! -->
+          <button type="button">2</button>
+        </li>
+      </div>
+      <div class="goods-list">
+        <li>
+          <img src="/src/study/asset/두부.jpg" alt="고소한 두부 1kg" />
+          <div class="goods">
+            <p>고소한 두부 1kg</p>
+            <p class="price">2,210원</p>
+          </div>
+          <!-- 버튼 -, + 도 클릭되게 할수가 있었음 !! -->
+          <button type="button">1</button>
+        </li>
+      </div>
+      <hr />
+      <p class="all-price">구매총액 : 8,600원</p>
+    </ul>
+  </body>
+</html>

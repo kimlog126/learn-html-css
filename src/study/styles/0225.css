@@ -1,0 +1,99 @@
+@import '/src/common/modern-reset.css';
+
+:root {
+  --small: 12px;
+  --medium: 14px;
+  --defalut: 16px;
+  --large: 18px;
+}
+
+body {
+  font-family: 'SUIT', sans-serif;
+}
+
+h1 {
+  margin-bottom: 50px;
+}
+
+ul {
+  border: 6px solid rgb(54, 54, 54);
+  border-radius: 0.5rem;
+  font-size: var(--defalut);
+  display: flow-root;
+  padding: 25px;
+  margin: 20px;
+
+  .title {
+    background: url('/src/study/asset/Vector.png') no-repeat;
+    background-size: 20px 20px;
+    padding-left: 30px;
+    font-size: var(--large);
+    font-weight: 700;
+  }
+
+  img {
+    width: 50px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    float: left;
+  }
+
+  li {
+    display: flow-root;
+  }
+}
+
+.goods {
+  float: left;
+  margin-top: 5px;
+  margin-left: 10px;
+  font-size: var(--medium);
+
+  p {
+    margin-bottom: 5px;
+    color: rgb(54, 54, 54);
+  }
+  .price {
+    font-weight: 700;
+    color: inherit;
+  }
+}
+
+button {
+  float: right;
+  margin-top: 0.9375rem;
+  margin-right: 0.625rem;
+  border: 1px solid silver;
+  width: 3.125rem;
+  border-radius: 10px;
+  font-size: var(--small);
+
+  &::before {
+    content: '-';
+    margin-right: 5px;
+    color: silver;
+  }
+
+  &::after {
+    content: '+';
+    margin-left: 5px;
+    color: silver;
+  }
+}
+
+.all-price {
+  float: right;
+  font-weight: 700;
+  font-size: var(--defalut);
+}
+
+hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.goods-list {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
