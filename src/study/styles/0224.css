@@ -28,14 +28,14 @@ h1 {
 }
 
 /* 이건 아직 안한거~~ */
-.container {
+/* .container {
   display: flex;
   flex-flow: column nowrap;
   gap: 1.25rem;
-}
+} */
 
-/* 추가~~ */
 .noti {
+  /* 기본값들 지역으로 재정의~~~ */
   --border-color: var(--gray);
   --base-spacing: var(--spacing-20);
   --text-color: var(--gray);
@@ -49,6 +49,9 @@ h1 {
   /* 사진에 따른 상자 찌그러트리기 */
   padding: var(--base-spacing) var(--base-spacing) var(--base-spacing)
     var(--large-spacing);
+
+  /* noti 사이 띄워야지 */
+  margin-bottom: var(--base-spacing);
 
   .noti-subject {
     font-size: var(--large);
