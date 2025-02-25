@@ -1,0 +1,74 @@
+body {
+  font-family: SUIT, sans-serif;
+}
+
+/* 스타일 초기화 */
+body *,
+body *::before,
+body *::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  /* color: black; */
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* 멤버 서비스 */
+.member-service {
+  background-color: yellow;
+  display: flow-root;
+
+  a {
+    background: lime;
+    float: left;
+    text-transform: uppercase;
+  }
+
+  a:nth-child(n + 2)::before {
+    content: '|';
+    margin: 0 0.5em;
+  }
+
+  /* .item::before {
+    content: '|';
+    margin-left: 10px;
+    padding-right: 8px;
+  }
+
+  .item.first::before {
+    content: '';
+  } */
+}
+
+/* 멤버 링크 */
+.member-link {
+  border: 1px solid red;
+  display: flow-root;
+  position: relative;
+  list-style-type: none;
+
+  li {
+    background-color: skyblue;
+    float: left;
+  }
+
+  span {
+    background: pink;
+    float: left;
+    margin: 0 0.5em;
+  }
+
+  a {
+    background-color: orange;
+    float: left;
+    text-transform: uppercase;
+  }
+}
