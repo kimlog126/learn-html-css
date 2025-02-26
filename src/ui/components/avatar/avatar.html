@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>아바타 컴포넌트</title>
+    <link
+      rel="shortcut icon"
+      href="/src/assets/favicon/likelion.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="/src/assets/favicon/likelion.svg" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+    />
+    <link
+      rel="preload"
+      as="style"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/ui/components/avatar/avatar.css" />
+  </head>
+  <body>
+    <h1>아바타 컴포넌트</h1>
+    <h2>인터렉션이 없는 아바타 컴포넌트</h2>
+    <figure class="img-avatar">
+      <img src="/src/assets/face/face1.jpg" alt="사용자명" />
+      <figcaption class="state default">
+        <span class="sr-only">오프라인</span>
+      </figcaption>
+    </figure>
+    <figure class="img-avatar">
+      <img src="/src/assets/face/face1.jpg" alt="사용자명" />
+      <figcaption class="state is-active">
+        <span class="sr-only">온라인</span>
+      </figcaption>
+    </figure>
+
+    <!-- 클릭 가능하도록 하기 -->
+    <h2>인터렉션이 있는 아바타 컴포넌트</h2>
+    <button type="button" class="button-avatar" aria-label="오프라인">
+      <img src="/src/assets/face/face1.jpg" alt="사용자명" />
+      <!-- 온오프라인 동그라미는 가상 요소 선택자 스타일링.. -->
+    </button>
+    <button type="button" class="button-avatar is-active" aria-label="온라인">
+      <img src="/src/assets/face/face1.jpg" alt="사용자명" />
+      <!-- 온오프라인 동그라미는 가상 요소 선택자 스타일링.. -->
+    </button>
+  </body>
+</html>
