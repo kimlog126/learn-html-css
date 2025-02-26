@@ -39,7 +39,7 @@ ul {
     float: left;
   }
 
-  li {
+  .goods-list {
     display: flow-root;
   }
 }
