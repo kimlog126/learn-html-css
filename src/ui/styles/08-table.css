@@ -1,0 +1,73 @@
+@import '/src/common/best-reset.css';
+@import '/src/common/theme.css';
+
+/* 테이블 스타일링 */
+.table-wrapper {
+  margin-inline: 20px;
+  margin-block: 100px;
+  block-size: 500px;
+  overflow: auto;
+}
+
+.table-styling {
+  border: 1px solid currentColor;
+  inline-size: 100%;
+  /* td 사이 선 간 여백 없어지게 해준당 */
+  /* spacing만 쓰면 여백만 줄여서 1픽셀이 2픽셀이 되는거 싫다 하면 collapse로 */
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  /* 흰선 우선순위를 높이고 싶어 */
+  /* border-collapse: separate; */
+
+  caption {
+    font-size: 2rem;
+    line-height: 1.5;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+
+  .number {
+    inline-size: 10%;
+  }
+
+  .name {
+    inline-size: 20%;
+  }
+
+  .email {
+    inline-size: 40%;
+  }
+
+  .phone {
+    inline-size: 30%;
+  }
+
+  td {
+    text-align: center;
+  }
+
+  th,
+  td {
+    padding: 10px;
+    /* 선 안주는게 요즘 트렌드긴 함 ..^^ */
+    /* border: 1px solid currentColor; */
+  }
+
+  thead tr {
+    position: sticky;
+    top: 0;
+    border-color: #fff;
+  }
+
+  thead tr,
+  tfoot tr {
+    background: rgb(15, 15, 28);
+    color: #fff;
+  }
+
+  tbody tr:nth-child(even) {
+    background: var(--pastel-gray);
+  }
+}
