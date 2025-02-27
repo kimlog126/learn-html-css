@@ -1,0 +1,98 @@
+@import '/src/common/theme.css';
+
+html,
+body {
+  font-family: 'SUIT', sans-serif;
+}
+
+body *,
+body *::before,
+body *::after {
+  box-sizing: border-box;
+}
+
+/* 플렉스 컨테이너 관련 속성 */
+.case-01 {
+  margin-top: 100px;
+
+  display: flex;
+  /* flex-direction: row;
+  flex-wrap: nowrap; */
+  /* 위에거 숏핸드로~ 근데 이건 취향 차이 !!*/
+  border: 1px solid red;
+  /* padding: 10px; */
+  inline-size: 622px;
+  block-size: 522px;
+
+  /* 정렬 */
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  /* 아이템이 아닌 콘텐츠 자체를 센터로. */
+  /* 아이템은 콘텐츠가 아니잖아. 그래서 줄바꿈이 일어나는거고.. 박스가 case-01이 아이템. */
+  align-content: center;
+
+  /* row-gap / column-gap 숏핸드 */
+  /* 값 하나만 주면 row column 같은값~ */
+  gap: 20px 40px;
+
+  /* 클래스 이름에 item만 포함된 거 전부 선택하고 싶다 */
+  [class*='item'] {
+    /* margin-block: 10px; */
+    background: var(--pastel-yellow);
+    border: 1px solid currentColor;
+    /* inline-size: 100px;
+    block-size: 100px; */
+
+    /* width 안에서 인라인 박스 가운데로~
+    text-align은 블록에서 사용 가능 */
+    text-align: center;
+    /* 속성 하나로 세로 기준 가운데 정렬하기 
+      normal flow일 때도 가능 !! */
+    align-content: center;
+
+    /* 기존에 세로 기준 가운데 정렬을 지원하지 않을 때 사용하던 트릭 */
+    /* display flex 없이 높이도 가운데로 오고 싶다 = 높이와 같은 값 주기 */
+    /* 근데 글꼴마다 위아래 여백 다를 수 있어서 완벽하게 맞추는것이 아님.. */
+    /* line-height: 100px; */
+  }
+
+  .item1 {
+    /* inline-size: 200px; */
+    font-size: 48px;
+  }
+  .item2 {
+    font-size: 30px;
+  }
+}
+
+/* 플렉스 아이템 관련 속성 */
+.case-02 {
+  border: 1px solid green;
+  /* width: 502px; */
+  inline-size: 502px;
+  display: flex;
+  flex-flow: row nowrap;
+
+  /* 클래스가 item으로 시작하는거~ */
+  [class^='item'] {
+    border: 1px solid currentColor;
+    /* width: 100px; */
+    /* height: 100px; */
+    /* inline-size: 100px;
+    block-size: 100px; */
+    text-align: center;
+    align-content: center;
+    /* flex-basis: 200px;
+    flex-shrink: 1; */
+    /* flex-grow: 1; */
+
+    /* 숏핸드 표기법 // grow shrink basis 순서 */
+    flex: 0 1 200px;
+
+    &:nth-child(even) {
+      order: -1;
+      /* flex-grow: 2; */
+    }
+  }
+}
