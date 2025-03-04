@@ -1,0 +1,90 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/login-theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+
+/* 체크박스 (배경 이미지) */
+.checkbox {
+  --size: 1.5rem;
+
+  display: inline-flex;
+  block-size: var(--size);
+  height: var(--size);
+  /* align-items: center; */
+  position: relative;
+  font-size: var(--font-md);
+
+  /* has를 사용한 디자인 */
+  /* .checkbox 컨테이너 안에 자식 요소 중 .bg-img 클래스가 있을 경우 input 요소를 선택 */
+  /* 이것만 있어도 스크립트 없어도 가능한게 많다.. */
+  /* 체크박스 안 모든 것을 찾는데 bg-img가 있다면 input으로 가라 ~ */
+  &:has(.bg-img) input {
+    position: absolute;
+    top: 0;
+    inset-block-start: 0;
+    left: 0;
+    inset-inline-start: 0;
+    margin: 0;
+    width: var(--size);
+    height: var(--size);
+    block-size: var(--size);
+    appearance: none;
+  }
+
+  /* input:focus {
+    outline: 0;
+    box-shadow: 0 0 0 1px var(--blue-900);
+    border-radius: var(--rounded-xs);
+  } */
+
+  label.bg-img {
+    background: url(/src/assets/naver/unchecked.svg) no-repeat;
+    /* 백그라운드 위치 설정 방법 1 */
+    padding-left: 1.875rem;
+    padding-inline-start: 1.875rem;
+    align-content: center;
+
+    /* 방법 2 */
+    /* text-indent: 2rem; */
+  }
+
+  input:checked + label.bg-img {
+    background-image: url(/src/assets/naver/checked.svg);
+  }
+}
+
+/* 체크박스 (svg 요소) */
+.checkbox.svg {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.375rem;
+  position: relative;
+
+  input {
+    position: absolute;
+    top: 0;
+    inset-block-start: 0;
+    left: 0;
+    inset-inline-start: 0;
+    margin: 0;
+    width: var(--size);
+    height: var(--size);
+    block-size: var(--size);
+    appearance: none;
+  }
+
+  label {
+    display: contents;
+  }
+
+  input:checked + label {
+    .svg--area,
+    .svg--border {
+      fill: var(--green-500);
+    }
+
+    .svg--mark {
+      fill: var(--white);
+    }
+  }
+}
