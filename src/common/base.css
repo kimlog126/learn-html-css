@@ -13,3 +13,12 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* components container 스타일링 */
+.components-container {
+  /* bacground: yellow; */
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 1rem;
+  padding: 1rem;
+}
