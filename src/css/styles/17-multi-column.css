@@ -1,0 +1,66 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+
+/* 다단 레이아웃을 적용한 컨테이너 */
+.container {
+  background: var(--pastel-lavender);
+  padding: 1em;
+
+  .case {
+    margin-block: 20px;
+  }
+  /* case : column width */
+  .case-01 {
+    column-width: 15rem;
+    /* 구분선 모양 */
+    column-rule: 1px solid red;
+    column-gap: 2rem;
+  }
+
+  /* case : column-count*/
+  .case-02 {
+    column-count: 4;
+    column-rule: 1px dotted green;
+
+    span {
+      display: block;
+      background: var(--pastel-dark-blue);
+      color: var(--white);
+      padding: 0.5em;
+      /* column-span을 사용하기 위해서는 블록 요소여야만 함 */
+      column-span: all;
+    }
+  }
+
+  /* case : columns 단축 속성에 colum-width 선언 */
+  /* 양쪽 두개를 주면 하나만 적용된다. 둘 중 하나는 무조건 auto */
+  .case-03 {
+    columns: 5rem 3;
+    column-rule: 3px double blue;
+  }
+
+  .case-04 {
+    columns: 2;
+  }
+
+  /* case: colum-fill: balance가 기본값 */
+  .case-05 {
+    columns: 2;
+    column-fill: auto;
+    block-size: 100px;
+  }
+}
+
+/*  */
+.wrapper {
+  background: var(--pastel-lemon);
+  padding: 1em;
+  columns: 4;
+
+  .case {
+    break-after: always;
+    border: 1px solid red;
+  }
+}

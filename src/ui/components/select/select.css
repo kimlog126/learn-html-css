@@ -1,0 +1,40 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+
+/* Select UI */
+body {
+  margin: 20px;
+}
+
+.select {
+  display: inline-grid;
+
+  svg,
+  select {
+    grid-area: 1/1/2/2;
+  }
+
+  svg {
+    margin: 0 0.5em;
+    /* 모든 svg에 포인터 이벤트 발생하지 않도록 함 */
+    pointer-events: none;
+  }
+
+  select {
+    background: transparent;
+    border: 1px solid gray;
+    border-radius: 8px;
+    appearance: none;
+    padding: 0.5em 1.75em;
+  }
+
+  .icon-global {
+    place-self: center start;
+  }
+
+  .icon-triangle {
+    place-self: center end;
+  }
+}
