@@ -3,7 +3,6 @@
 @import '/src/common/a11y.css';
 @import '/src/common/base.css';
 
-/* 다단 레이아웃을 적용한 컨테이너 */
 .container {
   background: var(--pastel-lavender);
   padding: 1em;
@@ -11,6 +10,7 @@
   .case {
     margin-block: 20px;
   }
+
   /* case : column width */
   .case-01 {
     column-width: 15rem;
@@ -20,7 +20,6 @@
   }
 
   /* case : column-count*/
-  /* column-rule 속성으로 단 구분선 스타일링 */
   .case-02 {
     column-count: 4;
     column-rule: 1px dotted green;
@@ -53,15 +52,15 @@
     height: 100px;
     block-size: 100px;
   }
+}
 
-  .wrapper {
-    background: var(--pastel-lemon);
-    padding: 1em;
-    columns: 3;
+.wrapper {
+  background: var(--pastel-lemon);
+  padding: 1em;
+  columns: 3;
 
-    .case {
-      break-before: column;
-      border: 1px solid red;
-    }
+  .case {
+    break-before: column;
+    border: 1px solid red;
   }
 }

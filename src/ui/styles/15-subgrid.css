@@ -44,6 +44,7 @@ body {
   }
 }
 
+/* 컨테이너를 그리드로 배치 */
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
